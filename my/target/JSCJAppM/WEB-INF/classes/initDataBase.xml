@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data name="初始数据">
+
+	<resourcetypes name="资源类型">
+		<resourcetype id="0" name="菜单" description="菜单类型会显示在系统首页左侧菜单中" />
+		<resourcetype id="1" name="功能" description="功能类型不会显示在系统首页左侧菜单中" />
+	</resourcetypes>
+
+	<resources name="资源">
+		<!-- 1 -->
+		<resource id="xtgl" name="系统管理" url="" description="管理系统的资源、角色、机构、员工等信息"
+			seq="997" iconCls="ext-icon-application_view_tile">
+			<resourcetype id="0" name="菜单" />
+		</resource>
+		<!-- 1.1 -->
+		<resource id="zygl" name="资源管理" url="/securityJsp/base/resource.jsp"
+			description="管理系统的资源" seq="1" iconCls="ext-icon-newspaper_link" pid="xtgl">
+			<resourcetype id="0" name="菜单" />
+		</resource>
+		<resource id="zylb" name="资源列表" url="/base/resource!treeGrid"
+			description="查询资源" seq="0" iconCls="ext-icon-bullet_wrench" pid="zygl">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<resource id="zytj" name="添加资源" url="/base/resource!save"
+			description="添加资源" seq="1" iconCls="ext-icon-bullet_wrench" pid="zygl">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<resource id="zybj" name="编辑资源" url="/base/resource!update"
+			description="编辑资源" seq="2" iconCls="ext-icon-bullet_wrench" pid="zygl">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<resource id="zysc" name="删除资源" url="/base/resource!delete"
+			description="删除资源" seq="3" iconCls="ext-icon-bullet_wrench" pid="zygl">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<resource id="zyck" name="查看资源" url="/base/resource!getById"
+			description="查看资源" seq="4" iconCls="ext-icon-bullet_wrench" pid="zygl">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<!-- 1.2 -->
+		<resource id="jsgl" name="角色管理" url="/securityJsp/base/role.jsp"
+			description="管理系统中员工的角色" seq="2" iconCls="ext-icon-tux" pid="xtgl">
+			<resourcetype id="0" name="菜单" />
+		</resource>
+		<resource id="jslb" name="角色列表" url="/base/role!grid"
+			description="查询角色列表" seq="0" iconCls="ext-icon-bullet_wrench" pid="jsgl">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<resource id="jstj" name="添加角色" url="/base/role!save"
+			description="添加角色" seq="1" iconCls="ext-icon-bullet_wrench" pid="jsgl">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<resource id="jsbj" name="编辑角色" url="/base/role!update"
+			description="编辑角色" seq="2" iconCls="ext-icon-bullet_wrench" pid="jsgl">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<resource id="jssc" name="删除角色" url="/base/role!delete"
+			description="删除角色" seq="3" iconCls="ext-icon-bullet_wrench" pid="jsgl">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<resource id="jsck" name="查看角色" url="/base/role!getById"
+			description="查看角色" seq="4" iconCls="ext-icon-bullet_wrench" pid="jsgl">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<resource id="jssq" name="角色授权" url="/base/role!grant"
+			description="角色授权" seq="5" iconCls="ext-icon-bullet_wrench" pid="jsgl">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<!-- 1.3 -->
+		<!-- <resource id="jggl" name="机构管理" url="/securityJsp/base/organization.jsp" 
+			description="管理系统中员工的机构" seq="3" iconCls="ext-icon-group_link" pid="xtgl"> 
+			<resourcetype id="0" name="菜单" /> </resource> <resource id="jglb" name="机构列表" 
+			url="/base/organization!treeGrid" description="查询机构列表" seq="0" iconCls="ext-icon-bullet_wrench" 
+			pid="jggl"> <resourcetype id="1" name="功能" /> </resource> <resource id="jgtj" 
+			name="添加机构" url="/base/organization!save" description="添加机构" seq="1" iconCls="ext-icon-bullet_wrench" 
+			pid="jggl"> <resourcetype id="1" name="功能" /> </resource> <resource id="jgbj" 
+			name="编辑机构" url="/base/organization!update" description="编辑机构" seq="2" iconCls="ext-icon-bullet_wrench" 
+			pid="jggl"> <resourcetype id="1" name="功能" /> </resource> <resource id="jgsc" 
+			name="删除机构" url="/base/organization!delete" description="删除机构" seq="3" iconCls="ext-icon-bullet_wrench" 
+			pid="jggl"> <resourcetype id="1" name="功能" /> </resource> <resource id="jgck" 
+			name="查看机构" url="/base/organization!getById" description="查看机构" seq="4" iconCls="ext-icon-bullet_wrench" 
+			pid="jggl"> <resourcetype id="1" name="功能" /> </resource> <resource id="jgsq" 
+			name="机构授权" url="/base/organization!grant" description="机构授权" seq="5" iconCls="ext-icon-bullet_wrench" 
+			pid="jggl"> <resourcetype id="1" name="功能" /> </resource> -->
+		<!-- 1.4 -->
+		<resource id="yhgl" name="员工管理" url="/securityJsp/base/user.jsp"
+			description="管理系统中的员工" seq="4" iconCls="ext-icon-user_suit" pid="xtgl">
+			<resourcetype id="0" name="菜单" />
+		</resource>
+		<resource id="yhlb" name="员工列表" url="/base/user!grid"
+			description="查询员工列表" seq="0" iconCls="ext-icon-bullet_wrench" pid="yhgl">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<resource id="yhtj" name="添加员工" url="/base/user!save"
+			description="添加员工" seq="1" iconCls="ext-icon-bullet_wrench" pid="yhgl">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<resource id="yhbj" name="编辑员工" url="/base/user!update"
+			description="编辑员工" seq="2" iconCls="ext-icon-bullet_wrench" pid="yhgl">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<resource id="yhsc" name="删除员工" url="/base/user!delete"
+			description="删除员工" seq="3" iconCls="ext-icon-bullet_wrench" pid="yhgl">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<resource id="yhck" name="查看员工" url="/base/user!getById"
+			description="查看员工" seq="4" iconCls="ext-icon-bullet_wrench" pid="yhgl">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<resource id="yhjs" name="员工角色" url="/base/user!grantRole"
+			description="编辑员工角色" seq="5" iconCls="ext-icon-bullet_wrench" pid="yhgl">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<!-- <resource id="yhjg" name="员工机构" url="/base/user!grantOrganization" 
+			description="编辑员工机构" seq="6" iconCls="ext-icon-bullet_wrench" pid="yhgl"> 
+			<resourcetype id="1" name="功能" /> </resource> -->
+		<!-- <resource id="ygsctp" name="上传员工图片" url="/base/user!uploadImg" description="上传员工图片" 
+			seq="7" iconCls="ext-icon-bullet_wrench" pid="yhgl"> <resourcetype id="1" 
+			name="功能" /> </resource> -->
+
+		<!-- 1.5 -->
+		<resource id="ysjgl" name="元数据管理" url="/securityJsp/base/metadata.jsp"
+			description="管理系统中的元数据" seq="5" iconCls="ext-icon-asterisk_orange"
+			pid="xtgl">
+			<resourcetype id="0" name="菜单" />
+		</resource>
+		<resource id="ysjlb" name="元数据列表" url="/base/metadata!grid"
+			description="查询元数据列表" seq="0" iconCls="ext-icon-bullet_wrench" pid="ysjgl">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<resource id="ysjtj" name="添加元数据" url="/base/metadata!save"
+			description="添加元数据" seq="1" iconCls="ext-icon-bullet_wrench" pid="ysjgl">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<resource id="ysjbj" name="编辑元数据" url="/base/metadata!update"
+			description="编辑元数据" seq="2" iconCls="ext-icon-bullet_wrench" pid="ysjgl">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<resource id="ysjsc" name="删除元数据" url="/base/metadata!delete"
+			description="删除元数据" seq="3" iconCls="ext-icon-bullet_wrench" pid="ysjgl">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<resource id="ysjck" name="查看元数据" url="/base/metadata!getById"
+			description="查看元数据" seq="4" iconCls="ext-icon-bullet_wrench" pid="ysjgl">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<resource id="ysjxxck" name="查看元数据详细"
+			url="/base/metadata!findMetadataDetail" description="查看元数据详细" seq="5"
+			iconCls="ext-icon-bullet_wrench" pid="ysjgl">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<!-- 1.6 -->
+		<resource id="xtcsgl" name="系统参数管理" url="/securityJsp/base/config.jsp"
+			description="管理系统中的系统参数" seq="6" iconCls="ext-icon-brick" pid="xtgl">
+			<resourcetype id="0" name="菜单" />
+		</resource>
+		<resource id="xtcslb" name="系统参数列表" url="/base/config!grid"
+			description="查询系统参数列表" seq="0" iconCls="ext-icon-bullet_wrench" pid="xtcsgl">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<resource id="xtcstj" name="添加系统参数" url="/base/config!save"
+			description="添加系统参数" seq="1" iconCls="ext-icon-bullet_wrench" pid="xtcsgl">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<resource id="xtcsbj" name="编辑系统参数" url="/base/config!update"
+			description="编辑系统参数" seq="2" iconCls="ext-icon-bullet_wrench" pid="xtcsgl">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<resource id="xtcssc" name="删除系统参数" url="/base/config!delete"
+			description="删除系统参数" seq="3" iconCls="ext-icon-bullet_wrench" pid="xtcsgl">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<resource id="xtcsck" name="查看系统参数" url="/base/config!getById"
+			description="查看系统参数" seq="4" iconCls="ext-icon-bullet_wrench" pid="xtcsgl">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<resource id="xtsctp" name="上传系统图片" url="/base/config!uploadImg"
+			description="上传系统图片" seq="5" iconCls="ext-icon-bullet_wrench" pid="xtcsgl">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<!-- 2 -->
+		<resource id="xtjk" name="系统监控" url="" description="监控系统运行情况等信息"
+			seq="998" iconCls="ext-icon-monitor">
+			<resourcetype id="0" name="菜单" />
+		</resource>
+		<!-- 2.1 -->
+		<resource id="monitoring" name="项目监控" url="/monitoring"
+			description="监控项目" seq="1" iconCls="ext-icon-monitor_error" pid="xtjk">
+			<resourcetype id="0" name="菜单" />
+		</resource>
+		<!-- 2.2 -->
+		<resource id="druid" name="数据源监控" url="/druid" description="监控数据源"
+			seq="2" iconCls="ext-icon-monitor_link" pid="xtjk">
+			<resourcetype id="0" name="菜单" />
+		</resource>
+		<!-- 2.3 -->
+		<resource id="actionConfigBrowser" name="Action映射监控"
+			url="/config-browser/showConstants.myhope" description="Action映射情况监控"
+			seq="3" iconCls="ext-icon-monitor_lightning" pid="xtjk">
+			<resourcetype id="0" name="菜单" />
+		</resource>
+		<!-- 2.4 -->
+		<resource id="online" name="员工登录历史监控" url="/securityJsp/base/online.jsp"
+			description="监控员工登录、注销" seq="4" iconCls="ext-icon-chart_line" pid="xtjk">
+			<resourcetype id="0" name="菜单" />
+		</resource>
+		<resource id="onlineGrid" name="员工登录历史列表" url="/base/online!grid"
+			description="员工登录、注销历史记录列表" seq="0" iconCls="ext-icon-bullet_wrench"
+			pid="online">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<!-- 3 -->
+		<resource id="xtbb" name="系统报表" url="" description="查看系统相关报表图标"
+			seq="999" iconCls="ext-icon-chart_curve">
+			<resourcetype id="0" name="菜单" />
+		</resource>
+		<!-- 3.1 -->
+		<resource id="userCreateDatetimeChart" name="注册时间分布"
+			url="/securityJsp/base/chart/userCreateDatetimeChart.jsp"
+			description="员工注册时间分布报表" seq="1" iconCls="ext-icon-chart_bar" pid="xtbb">
+			<resourcetype id="0" name="菜单" />
+		</resource>
+		<!-- 3.2 -->
+		<resource id="userRoleChart" name="员工角色分布"
+			url="/securityJsp/base/chart/userRoleChart.jsp" description="员工角色分布"
+			seq="2" iconCls="ext-icon-chart_pie" pid="xtbb">
+			<resourcetype id="0" name="菜单" />
+		</resource>
+		<!-- 会员管理 -->
+		<resource id="hygl" name="会员管理" url=""
+			description="" seq="1" iconCls="ext-icon-user">
+			<resourcetype id="0" name="菜单" />
+		</resource>
+		<resource id="hyxq" name="会员详情" url="/securityJsp/member/member.jsp"
+			description="" seq="1" iconCls="ext-icon-user" pid="hygl" >
+			<resourcetype id="0" name="菜单" />
+		</resource>
+				<resource id="tjhy" name="添加会员" url="/member/member!save"
+					description="查询会员" seq="1" iconCls="ext-icon-bullet_wrench" pid="hyxq">
+					<resourcetype id="1" name="功能" />
+				</resource>
+				<resource id="bjhy" name="编辑会员" url="/member/member!update"
+					description="编辑会员" seq="2" iconCls="ext-icon-bullet_wrench" pid="hyxq">
+					<resourcetype id="1" name="功能" />
+				</resource>
+				<resource id="schy" name="删除会员" url="/member/member!delete"
+					description="删除会员" seq="3" iconCls="ext-icon-bullet_wrench" pid="hyxq">
+					<resourcetype id="1" name="功能" />
+				</resource>
+				<resource id="hylb" name="会员列表" url="/member/member!grid"
+					description="会员列表" seq="4" iconCls="ext-icon-bullet_wrench" pid="hyxq">
+					<resourcetype id="1" name="功能" />
+				</resource>
+				<resource id="ckhy" name="查看会员" url="/member/member!getById"
+					description="查看会员" seq="5" iconCls="ext-icon-bullet_wrench" pid="hyxq">
+					<resourcetype id="1" name="功能" />
+				</resource>
+				<resource id="hysctp" name="上传会员图片" url="/member/member!uploadImg"
+					description="上传会员图片" seq="6" iconCls="ext-icon-bullet_wrench" pid="hyxq">
+					<resourcetype id="1" name="功能" />
+		       </resource>
+		       
+		       
+			<resource id="wzgl" name="文章管理" url=""
+				description="" seq="2" iconCls="ext-icon-script">
+				<resourcetype id="0" name="菜单" />
+			</resource>
+			<resource id="wzlb" name="文章列表" url="/securityJsp/article/article.jsp"
+				description="" seq="1" iconCls="ext-icon-user" pid="wzgl" >
+				<resourcetype id="0" name="菜单" />
+			</resource>
+	 			<resource id="wzlbxq" name="文章列表详情" url="/article/article!grid"
+					description="" seq="1" iconCls="ext-icon-bullet_wrench" pid="wzlb">
+					<resourcetype id="1" name="功能" />
+		        </resource>
+	 			<resource id="wzxq" name="文章列表详情" url="/article/article!getById"
+					description="" seq="2" iconCls="ext-icon-bullet_wrench" pid="wzlb">
+					<resourcetype id="1" name="功能" />
+		        </resource>
+				<resource id="xzwzxx" name="新增文章信息" url="/article/article!save"
+							description="" seq="3" iconCls="ext-icon-bullet_wrench" pid="wzlb">
+							<resourcetype id="1" name="功能" />
+			    </resource>
+				<resource id="scwztp" name="上传文章图片" url="/article/article!uploadImg_js"
+							description="" seq="4" iconCls="ext-icon-bullet_wrench" pid="wzlb">
+							<resourcetype id="1" name="功能" />
+				</resource>
+				<resource id="bjxx" name="编辑信息" url="/article/article!update"
+							description="" seq="5" iconCls="ext-icon-bullet_wrench" pid="wzlb">
+							<resourcetype id="1" name="功能" />
+				</resource>
+				<resource id="bjwz" name="编辑文章" url="/article/article!uploadImg"
+							description="" seq="6" iconCls="ext-icon-bullet_wrench" pid="wzlb">
+							<resourcetype id="1" name="功能" />
+				</resource>
+				<resource id="scwz" name="删除文章" url="/article/article!delete"
+							description="" seq="7" iconCls="ext-icon-bullet_wrench" pid="wzlb">
+							<resourcetype id="1" name="功能" />
+				</resource>
+				<resource id="sfsj" name="是否上架" url="/article/article!audit"
+							description="" seq="8" iconCls="ext-icon-bullet_wrench" pid="wzlb">
+							<resourcetype id="1" name="功能" />
+				</resource>
+			<resource id="lmgl" name="栏目管理" url=""
+				description="" seq="3" iconCls="ext-icon-shape_align_right">
+				<resourcetype id="0" name="菜单" />
+			</resource>
+			<resource id="lmglz" name="栏目管理" url="/securityJsp/classify/classify.jsp"
+				description="" seq="1" iconCls="ext-icon-shape_align_middle" pid="lmgl" >
+				<resourcetype id="0" name="菜单" />
+			</resource>
+			<resource id="bjlm" name="编辑栏目" url="/classify/classify!getById"
+							description="" seq="8" iconCls="ext-icon-bullet_wrench" pid="lmglz">
+							<resourcetype id="1" name="功能" />
+			</resource>
+				<resource id="bclm" name="保存栏目" url="/classify/classify!save"
+							description="" seq="9" iconCls="ext-icon-bullet_wrench" pid="lmglz">
+							<resourcetype id="1" name="功能" />
+			</resource>
+				<resource id="lmlb" name="栏目列表" url="/classify/classify!grid"
+							description="" seq="10" iconCls="ext-icon-bullet_wrench" pid="lmglz">
+							<resourcetype id="1" name="功能" />
+			</resource>
+			<resource id="xglb" name="修改栏目" url="/classify/classify!update"
+							description="" seq="11" iconCls="ext-icon-bullet_wrench" pid="lmglz">
+							<resourcetype id="1" name="功能" />
+			</resource>
+			<resource id="sclb" name="删除栏目" url="/classify/classify!deleteClassify"
+							description="" seq="12" iconCls="ext-icon-bullet_wrench" pid="lmglz">
+							<resourcetype id="1" name="功能" />
+			</resource>
+			<resource id="kxgl" name="快讯管理" url=""
+				description="" seq="4" iconCls="ext-icon-application_view_columns">
+				<resourcetype id="0" name="菜单" />
+			</resource>
+			<resource id="kxglz" name="快讯管理" url="/securityJsp/newsFlash/newsFlash.jsp"
+				description="" seq="1" iconCls="ext-icon-application_view_detail" pid="kxgl" >
+				<resourcetype id="0" name="菜单" />
+			</resource>
+			<resource id="bckx" name="保存快讯" url="/newsflash/newsflash!save"
+							description="" seq="0" iconCls="ext-icon-bullet_wrench" pid="kxglz">
+							<resourcetype id="1" name="功能" />
+			</resource>
+			<resource id="fbkx" name="发布快讯" url="/newsflash/newsflash!sendNewsflash"
+							description="" seq="1" iconCls="ext-icon-bullet_wrench" pid="kxglz">
+							<resourcetype id="1" name="功能" />
+			</resource>
+			<resource id="bjkx" name="编辑快讯" url="/newsflash/newsflash!getById"
+							description="" seq="2" iconCls="ext-icon-bullet_wrench" pid="kxglz">
+							<resourcetype id="1" name="功能" />
+			</resource>
+			<resource id="sckx" name="删除快讯" url="/newsflash/newsflash!deleteNewsflash"
+							description="" seq="3" iconCls="ext-icon-bullet_wrench" pid="kxglz">
+							<resourcetype id="1" name="功能" />
+			</resource>
+			<resource id="xgkx" name="修改快讯" url="/newsflash/newsflash!update"
+							description="" seq="4" iconCls="ext-icon-bullet_wrench" pid="kxglz">
+							<resourcetype id="1" name="功能" />
+			</resource>
+			<resource id="kxlb" name="快讯列表" url="/newsflash/newsflash!grid"
+							description="" seq="5" iconCls="ext-icon-bullet_wrench" pid="kxglz">
+							<resourcetype id="1" name="功能" />
+			</resource>
+	</resources>
+
+
+	<roles name="角色">
+		<role id="0" name="超管" description="拥有系统所有权限" seq="0" />
+		<role id="1" name="注册员工角色" description="注册员工角色" seq="1" />
+	</roles>
+
+	<roles_resources name="角色和资源对应关系">
+		<role id="1" name="注册员工角色">
+			<resource id="xtgl" name="系统管理" />
+			<resource id="yhgl" name="员工管理" />
+			<resource id="yhlb" name="员工列表" />
+			<resource id="yhck" name="查看员工" />
+		</role>
+	</roles_resources>
+
+	<organizations name="机构">
+		<organization id="0" name="正淘商城" address="江北" code="1"
+			organizationtype="1" iconCls="ext-icon-brick" seq="0" orgmanager="1" />
+	</organizations>
+
+	<organizations_resources name="机构和资源对应关系">
+		<organization id="0" name="一级机构">
+			<resource id="xtgl" name="系统管理" />
+
+			<resource id="zygl" name="资源管理" />
+			<resource id="zylb" name="资源列表" />
+			<resource id="zyck" name="查看资源" />
+
+			<resource id="jsgl" name="角色管理" />
+			<resource id="jslb" name="角色列表" />
+			<resource id="jsck" name="查看角色" />
+
+			<!--<resource id="jggl" name="机构管理" /> -->
+			<!--<resource id="jglb" name="机构列表" /> -->
+			<!--<resource id="jgck" name="查看机构" /> -->
+
+			<resource id="yhgl" name="员工管理" />
+			<resource id="yhlb" name="员工列表" />
+			<resource id="yhck" name="查看员工" />
+		</organization>
+	</organizations_resources>
+
+	<users name="员工">
+		<user id="0" loginname="admin" pwd="admin" name="超级管理员" sex="1"
+			age="24" code="1" mobile="13011111111" />
+	</users>
+
+	<users_roles name="员工和角色对应关系">
+		<!-- <user id="1" loginname="guest"> <role id="1" name="Guest角色" /> </user> -->
+	</users_roles>
+
+	<users_organizations name="员工和机构的关系">
+		<!-- <user id="1" loginname="guest"> <organization id="0" name="一级机构" /> 
+			</user> -->
+	</users_organizations>
+
+	<metadatas name="元数据">
+		<metadata id="1" name="sex" content="性别" remark="人员性别" type="1">
+			<metadata_detail id="1" key="1" seq="1" val="男"
+				remark="男" />
+			<metadata_detail id="2" key="2" seq="2" val="女"
+				remark="女" />
+		</metadata>
+		<!-- 会员状态 -->
+		<metadata id="hyzt" name="member_status" content="会员状态" remark="会员状态"
+			type="1">
+			<metadata_detail id="hyzt_sh" key="0" seq="0" val="审核"
+				remark="审核" />
+			<metadata_detail id="hyzt_wsh" key="1" seq="1" val="未审核"
+				remark="未审核" />
+		</metadata>
+	 
+		<!-- 取消标识 -->
+		<metadata id="8" name="cancelflag" content="取消标识" remark="取消标识"
+			type="3">
+			<metadata_detail id="18" key="1" seq="1" val="未取消"
+				remark="未取消" />
+			<metadata_detail id="19" key="2" seq="2" val="取消中"
+				remark="取消中" />
+			<metadata_detail id="20" key="3" seq="3" val="已取消"
+				remark="已取消" />
+		</metadata>
+
+		<metadata id="4" name="deleteflag" content="删除类型" remark="删除类型"
+			type="3">
+			<metadata_detail id="47546f45-4f31-42e8-bc35-7787328fe344"
+				key="0" seq="0" val="未删除" remark="未删除" />
+			<metadata_detail id="cf01ec80-0c83-440d-9406-d84f1ed3b53e"
+				key="1" seq="1" val="逻辑删除" remark="逻辑删除" />
+			<metadata_detail id="b1f5d892-d0b0-4f2e-b64d-3bbf9aae7133"
+				key="2" seq="2" val="物理删除" remark="物理删除" />
+		</metadata>
+		<!--系统参数分类 -->
+		<metadata id="15" name="config_type" content="系统参数分类" remark="系统参数分类"
+			type="3">
+			<metadata_detail id="30" key="0" seq="1" val="商城首页资源"
+				remark="商城首页资源" />
+			<metadata_detail id="31" key="1" seq="2" val="积分分红比例"
+				remark="积分分红比例" />
+		</metadata>
+		<!--元数据类型 -->
+		<metadata id="3" name="metadata_type" content="元数据类型" remark="元数据类型"
+			type="3">
+			<metadata_detail id="32" key="1" seq="1" val="数据"
+				remark="数据" />
+			<metadata_detail id="34" key="3" seq="3" val="系统"
+				remark="系统" />
+		</metadata>
+		
+		<metadata id="17" name="sendStatus" content="发布状态" remark="发布状态"
+			type="3">
+			<metadata_detail id="35" key="0" seq="0" val="否"
+				remark="否" />
+			<metadata_detail id="36" key="1" seq="1" val="是"
+				remark="是" />
+		</metadata>
+		<metadata id="16" name="defaults" content="是否默认" remark="是否默认"
+			type="3">
+			<metadata_detail id="37" key="0" seq="0" val="否"
+				remark="否" />
+			<metadata_detail id="38" key="1" seq="1" val="是"
+				remark="是" />
+		</metadata>
+	</metadatas>
+
+	<configs name="系统参数">
+		<config id="1" key="copyright" name="copyright" val="Copyright © 2017 正淘商城"
+			type="0" remark="Copyright © 2017 正淘商城" />
+		<config id="5" key="goods_num" name="商品数量" val="100000" type=""
+			remark="当前存在商品，用于在新增商品时处理编号" />
+		<config id="6" key="mall_logo" name="商城Logo"
+			val="${contextPath}/images/logo.jpg" type="0" remark="商城LOGO" />
+		<config id="7" key="mall_forgot_img" name="商城忘记密码背景图片"
+			val="${contextPath}/images/1488939821671881226.jpg" type="0" remark="商城忘记密码背景图片" />
+		<config id="8" key="mall_register_img" name="商城注册背景图片"
+			val="${contextPath}/images/1488939821671881226.jpg" type="0" remark="商城注册背景图片" />
+		<config id="9" key="mall_login_img" name="商城登录页背景图片"
+			val="${contextPath}/images/1488936109167439630.jpg" type="0"
+			remark="商城登录页背景图片（width=&quot;400&quot; height=&quot;324&quot; ）" />
+		<config id="10" key="uploadServer" name="资源文件服务器" val="172.20.21.61/upload"
+			type="0" remark="资源文件服务器" />
+		<config id="11" key="obligation" name="待付款 基础时间" val="2"
+			type="0" remark="待付款 基础时间" />
+		<config id="12" key="confirmRec" name="确认收货基础时间" val="370"
+			type="0" remark="确认收货基础时间" />
+		<config id="13" key="goods_explain" name="商品解释部分" val="日租玩具的租期从您付款成功即刻生效，系统显示的玩具到期日为租期最后一天请您在到期日或之前发起续租或退租。 如果逾期，将会按照 超期天数 * 玩具日租价 扣除费用逾期五天以上者，将会按照 超期天数 * 玩具日租价 * 5 收取滞纳金"
+			type="0" remark="商品详情页，解释说明" />
+	</configs>
+
+</data>
